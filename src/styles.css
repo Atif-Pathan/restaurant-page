@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
+/* CSS RESET */
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/*
+    2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+  
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    min-width: 100%;
+    --bg-color: #fffae2;
+    --bg-pink: #ff9ce9;
+    --text-pink: #f53490;
+    --accent-pink: #ffd5f3;
+    --outline-border: #999896;
+    --button-border: #ffec6d;
+    background-color: var(--bg-color);
+}
+  
+/*
+    5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    max-inline-size: 100%;
+}
+  
+/*
+    6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+    font-size: 100%;
+}
+  
+/*
+    7. Avoid text overflows and inherit font size
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*
+    8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+  
+.nav-bar {
+    font-family: "Exo", sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    /* gap: 5rem; */
+    height: 7rem;
+    border: none;
+    border-left: 2px solid var(--outline-border);
+    border-bottom: 2px solid var(--outline-border);
+    border-top: 2px solid var(--outline-border);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#restaurant-logo {
+    /* width: max-content; */
+    height: 4.5rem;
+    /* border-right: 2px solid var(--outline-border); */
+}
+
+button {
+    text-transform: uppercase;
+    height: 7rem;
+    width: 2rem;
+    outline: none;
+    border: none;
+    border-right: 2px solid var(--outline-border);
+    cursor: pointer;
+    background-color: transparent;
+    flex: 1;
+    padding: 0 1rem;
+    margin: 0;
+}
+
+.logo-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prof-cart-btns {
+    cursor:default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.fa-solid {
+    cursor: pointer;
+}

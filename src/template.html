@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Page</title>
+    <script src="https://kit.fontawesome.com/6ed07fb8fe.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <button type="button">Home</button>
+    <header class="header">
+        <nav class="nav-bar">
+            <button type="button" class="logo-btn"><img src="./dreamy-logo.png" alt="restaurant logo" title="Home" id="restaurant-logo"></button>
             <button type="button">Menu</button>
             <button type="button">About</button>
+            <button type="button">Reviews</button>
+            <button type="button">Contact Us</button>
+            <button type="button" class="prof-cart-btns">
+                <i class="fa-solid fa-user fa-lg" title="Profile" style="color: #f53490;"></i>
+                <i class="fa-solid fa-cart-shopping fa-lg" title="Cart" style="color: #f53490;"></i>
+            </button>
         </nav>
     </header>
     <div id="content"></div>
