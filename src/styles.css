@@ -28,7 +28,7 @@ body {
     --bg-pink: #ff9ce9;
     --text-pink: #f53490;
     --accent-pink: #ffd5f3;
-    --outline-border: #999896;
+    --outline-border: #707070;
     --button-border: #ffec6d;
     background-color: var(--bg-color);
 }
@@ -77,7 +77,7 @@ ol[role="list"], ul[role="list"] {
     font-size: 1.5rem;
     display: flex;
     /* gap: 5rem; */
-    height: 7rem;
+    height: 13vh;
     border: none;
     border-left: 2px solid var(--outline-border);
     border-bottom: 2px solid var(--outline-border);
@@ -115,11 +115,131 @@ button {
 .prof-cart-btns {
     cursor:default;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 3rem;
 }
 
 .fa-solid {
     cursor: pointer;
 }
+
+.home {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid var(--outline-border);
+    height: 77vh;
+}
+
+.home-left {
+    flex: 1.4;
+    border-left: 2px solid var(--outline-border);
+    background-color: var(--bg-pink);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.home-left-title {
+    font-family: "Titan One", sans-serif;
+    /* width: 35rem; */
+    font-size: 6.5rem;
+    line-height: 1;
+}
+
+.home-left-para {
+    font-family: "Exo", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+strong {
+    /* color: #fc6b4a; */
+    text-decoration: underline;
+    /* font-size: 3rem; */
+}
+
+.menu-btn {
+    position: relative;
+}
+
+#home-left-menu-btn {
+    margin-top: 2rem;
+    border: none;
+    font-family: "Exo", sans-serif;
+    font-size: 2rem;
+    border: 1px solid var(--outline-border);
+    width: 25rem;
+    text-align: center;
+    /* padding: 0 15rem; */
+    height: 5rem;
+    background-color: var(--bg-color);
+    box-shadow: 1.2rem 1.2rem var(--button-border);
+    transition: font-size 0.1s ease-in-out;
+}
+
+#home-left-menu-btn:active{
+    transform: translate(1.2rem, 1.2rem);
+    box-shadow: none;
+}
+
+#home-left-menu-btn:hover {
+    font-size: 2.3rem;
+}
+
+.home-right {
+    flex: 1;
+    border-right: 2px solid var(--outline-border);
+    border-left: 2px solid var(--outline-border);
+    display: flex;
+    justify-content: center;
+    /* height: 40rem; */
+    background-image: url(./donuts-flying-2.png);
+    background-size: 150%;
+    background-position-y: center;
+    background-position-x: -12rem;
+}
+
+.home-right img {
+    /* height: 40rem; */
+    width: 41rem;
+}
+
+.home-strip-container {
+    height: 10vh;
+    border-bottom: 2px solid var(--outline-border);
+    border-right: 2px solid var(--outline-border);
+    border-left: 2px solid var(--outline-border);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+.home-strip {
+    display: flex;
+    animation: move-strip 25s linear infinite;
+    white-space: nowrap;
+    gap: 2rem;
+}
+  
+.strip-content {
+    display: flex;
+    gap: 2rem;
+    font-family: "Exo", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+  
+@keyframes move-strip {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+}
+  
+  
