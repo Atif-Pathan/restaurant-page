@@ -1,3 +1,7 @@
+import { loadHomePage } from './homepage.js';
+import {loadMenu} from './menu.js';
 import "./styles.css";
 
-console.log("Hello Foodies!");
+// loadHomePage();
+// 
+loadMenu();
