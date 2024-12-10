@@ -112,6 +112,12 @@ button {
     align-items: center;
 }
 
+.logo-btn.active {
+    background-color: var(--bg-pink);
+    font-weight: bold; /* Make the active tab stand out */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
 .prof-cart-btns {
     cursor:default;
     display: flex;
@@ -121,6 +127,12 @@ button {
 
 .fa-solid {
     cursor: pointer;
+}
+
+.nav-btn.active {
+    background-color: var(--accent-pink);
+    font-weight: bold; /* Make the active tab stand out */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 .home {
@@ -445,4 +457,73 @@ strong {
         transform: scale(1.02); /* Slightly larger */
         /* opacity: 1; Slightly dimmer */
     }
+}
+
+.contact-page {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness for smaller screens */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.contact-left, .contact-right {
+    flex: 1 1 45%; /* Each column takes ~45% of the space */
+    min-width: 300px; /* Ensures a good minimum size for small screens */
+}
+
+.contact-left h2, .contact-right h3 {
+    color: #ff6f61;
+    margin-bottom: 1rem;
+}
+
+.contact-details p, .operating-hours ul, .social-media a {
+    margin: 0.5rem 0;
+}
+
+.contact-form {
+    margin-bottom: 2rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #e65a50;
+}
+
+.contact-map iframe {
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #ff6f61;
+    margin-right: 0.5rem;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
