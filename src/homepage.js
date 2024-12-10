@@ -45,14 +45,14 @@ export function loadHomePage() {
       const stripContent = document.createElement('div');
       stripContent.classList.add('strip-content');
       const items = [
-        {text:'OREO', color:'#f5da28'},
-        {text:'STRAWBERRY', color:'#fc6b4a'},
-        {text:'PEACH', color:'#f5da28'},
-        {text:'CHOCOLATE', color:'#fc6b4a'},
-        {text:'VANILLA', color:'#f5da28'},
-        {text:'BANANA', color:'#fc6b4a'},
-        {text:'MATCHA', color:'#f5da28'},
-        {text:'BIRTHDAY CAKE', color:'#fc6b4a'}
+        {text: 'OREO', color: '#f5da28'},
+        {text: 'STRAWBERRY', color: '#fc6b4a'},
+        {text: 'CARAMEL', color: '#f5da28'},
+        {text: 'VANILLA', color: '#fc6b4a'},
+        {text: 'BLUEBERRY', color: '#f5da28'},
+        {text: 'CHOCOLATE', color: '#fc6b4a'},
+        {text: 'COCONUT', color: '#f5da28'},
+        {text: 'LEMON', color: '#fc6b4a'},
       ];
       items.forEach(item=>{
         const span = document.createElement('span');

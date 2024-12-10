@@ -1,6 +1,18 @@
-import vanillaDonut from "./donut-vanilla.png";
+import goldenWhite from "./images/white-chocolate.png";
+import coconut from "./images/coconut.png";
+import lemon from "./images/lemon.png";
+import cremeBrulee from "./images/creme-brulee.png";
+import pinkDream from "./images/pink.png";
+import raspberry from "./images/raspberry.png";
+import oreo from "./images/oreo.png";
+import blueberry from "./images/blueberry.png";
+import velvetSwirl from "./images/white-raspberry.png";
+import walnutCaramel from "./images/caramel-walnut.png";
+import strawberryShine from "./images/strawberry.png";
+import chocoCrunch from "./images/chocolate-nuts.png";
+import chocoMelt from "./images/chocolate-filled.png";
+import vanillaDonut from "./images/donut-vanilla.png";
 
-// menu.js
 export function loadMenu() {
     const content = document.getElementById('content');
 
@@ -21,117 +33,187 @@ export function loadMenu() {
     const wrapper = document.createElement('div');
     wrapper.classList.add('carousel-wrapper');
 
-    // Basic card data (all identical for now)
-    const cards = [
+    const donutOptions = [
         {
-            imgSrc: '../donut-vanilla.png',
-            imgAlt: 'Vanilla Cloud Donut',
-            title: 'Vanilla Cloud',
-            price: '$2.50',
-            desc: 'A timeless classic with a soft vanilla glaze and delicate white sprinkles. Perfect for those who appreciate simplicity and elegance.'
-        },
-        {
-            imgSrc: '../donut-berry.png',
-            imgAlt: 'Berry Dream Donut',
-            title: 'Berry Dream',
+            imgSrc: vanillaDonut,
+            imgAlt: 'Vanilla Sprinkle Donut',
+            title: 'Vanilla Sprinkle',
             price: '$3.00',
-            desc: 'A vibrant donut coated in a smooth mixed berry glaze with the sweet and tangy flavors of strawberry, raspberry, and blueberry.'
+            desc: 'A classic vanilla glaze donut topped with colorful sprinkles for a timeless, delightful treat.'
         },
         {
-            imgSrc: '../donut-choco.png',
-            imgAlt: 'Choco Bliss Donut',
-            title: 'Choco Bliss',
+            imgSrc: blueberry,
+            imgAlt: 'Midnight Blue Donut',
+            title: 'Midnight Blue',
             price: '$3.50',
-            desc: 'Indulge in rich, dark chocolate perfection with a glossy glaze and a delicate drizzle of creamy white chocolate.'
+            desc: 'A vibrant blueberry glaze for balanced sweetness and berry flavor.'
         },
         {
-            imgSrc: '../donut-matcha.png',
-            imgAlt: 'Matcha Mirage Donut',
-            title: 'Matcha Mirage',
-            price: '$3.75',
-            desc: 'A refreshing donut with an earthy matcha glaze, balanced with a hint of vanilla for a unique and satisfying flavor.'
+            imgSrc: coconut,
+            imgAlt: 'Snow Drift Donut',
+            title: 'Snow Drift',
+            price: '$3.50',
+            desc: 'Shredded coconut and vanilla glaze evoke a wintery delight.'
         },
         {
-            imgSrc: '../donut-lemon.png',
-            imgAlt: 'Lemon Lush Donut',
-            title: 'Lemon Lush',
-            price: '$3.00',
-            desc: 'A zesty delight featuring a bright lemon glaze infused with a touch of honey for the perfect balance of tart and sweet.'
+            imgSrc: raspberry,
+            imgAlt: 'Berry Crush Donut',
+            title: 'Berry Crush',
+            price: '$3.50',
+            desc: 'Tangy raspberry glaze with fresh raspberries and crumble.'
         },
         {
-            imgSrc: '../donut-blue.png',
-            imgAlt: 'Blue Sky Donut',
-            title: 'Blue Sky',
+            imgSrc: velvetSwirl,
+            imgAlt: 'Velvet Swirl Donut',
+            title: 'Velvet Swirl',
             price: '$3.25',
-            desc: 'A dreamy blueberry glaze paired with a subtle lavender twist, offering a taste as calming as its soft pastel blue hue.'
+            desc: 'A white glaze drizzled with raspberry for sweet-tangy luxury.'
         },
         {
-            imgSrc: '../donut-caramel.png',
-            imgAlt: 'Caramel Dreamline Donut',
-            title: 'Caramel Dreamline',
+            imgSrc: lemon,
+            imgAlt: 'Citrus Glow Donut',
+            title: 'Citrus Glow',
+            price: '$3.00',
+            desc: 'Bright lemon glaze on a swirl-shaped donut, so refreshing.'
+        },
+        {
+            imgSrc: walnutCaramel,
+            imgAlt: 'Walnut Caramel Donut',
+            title: 'Walnut Caramel',
+            price: '$4.50',
+            desc: 'Caramel glaze and crunchy walnuts for perfect harmony.'
+        },
+        {
+            imgSrc: strawberryShine,
+            imgAlt: 'Strawberry Shine Donut',
+            title: 'Strawberry Shine',
+            price: '$3.25',
+            desc: 'A glossy strawberry glaze and pastel sprinkles for sweetness.'
+        },
+        {
+            imgSrc: chocoCrunch,
+            imgAlt: 'Choco Crunch Donut',
+            title: 'Choco Crunch',
             price: '$4.00',
-            desc: 'A decadent donut drenched in salted caramel glaze with a swirl of toffee drizzle. Luxurious and irresistible.'
+            desc: 'Chocolate glaze with hazelnuts and almonds for a nutty treat.'
         },
         {
-            imgSrc: '../donut-tropical.png',
-            imgAlt: 'Tropical Twilight Donut',
-            title: 'Tropical Twilight',
-            price: '$3.75',
-            desc: 'Escape to paradise with a pineapple and coconut glaze, topped with a hint of passion fruit for an exotic, tropical treat.'
+            imgSrc: chocoMelt,
+            imgAlt: 'Choco Melt Donut',
+            title: 'Choco Melt',
+            price: '$4.25',
+            desc: 'Gooey chocolate-filled donut topped with smooth chocolate.'
+        },
+        {
+            imgSrc: goldenWhite,
+            imgAlt: 'Golden White Donut',
+            title: 'Golden White',
+            price: '$3.25',
+            desc: 'White chocolate glaze with caramelized almonds, so refined.'
+        },
+        {
+            imgSrc: pinkDream,
+            imgAlt: 'Pink Dream Donut',
+            title: 'Pink Dream',
+            price: '$3.00',
+            desc: 'Playful pink glaze and colorful sprinkles for a joyful bite.'
+        },
+        {
+            imgSrc: oreo,
+            imgAlt: 'Dark Oreo Donut',
+            title: 'Dark Oreo',
+            price: '$4.00',
+            desc: 'Vanilla glaze, chocolate drizzle, and Oreo crumbles.'
+        },
+        {
+            imgSrc: cremeBrulee,
+            imgAlt: 'Caramel Bliss Donut',
+            title: 'Caramel Bliss',
+            price: '$4.25',
+            desc: 'Caramelized sugar glaze on custard-filled donut, pure elegance.'
         }
     ];
-    
 
-    // To achieve infinite looping, we duplicate the array a few times
-    const loopCount = 2;
-    const fullSet = [];
-    for (let i = 0; i < loopCount; i++) {
-        fullSet.push(...cards);
+    const cardCount = donutOptions.length;
+    const cardW = 384;
+    const cardGap = 48;
+    const totalSetWidth = cardCount * (cardW + cardGap);
+
+    const colorMap = {
+        'Vanilla Sprinkle': 'rgba(255, 231, 150, 0.6)',
+        'Midnight Blue': 'rgba(176, 205, 255, 0.6)',
+        'Snow Drift': 'rgba(200, 230, 255, 0.6)',
+        'Berry Crush': 'rgba(255, 205, 220, 0.6)',
+        'Velvet Swirl': 'rgba(255, 205, 230, 0.6)',
+        'Citrus Glow': 'rgba(255, 242, 150, 0.6)',
+        'Walnut Caramel': 'rgba(225, 200, 170, 0.6)',
+        'Strawberry Shine': 'rgba(255, 190, 200, 0.6)',
+        'Choco Crunch': 'rgba(219, 187, 140, 0.6)',
+        'Choco Melt': 'rgba(210, 165, 120, 0.6)',
+        'Golden White': 'rgba(255, 223, 180, 0.6)',
+        'Pink Dream': 'rgba(255, 200, 210, 0.6)',
+        'Dark Oreo': 'rgba(190, 190, 190, 0.6)',
+        'Caramel Bliss': 'rgba(235, 210, 170, 0.6)'
+    };
+
+    function getGradientColor(title) {
+        return colorMap[title] || 'rgba(255, 231, 150, 0.6)';
     }
 
-    // Create card elements
-    fullSet.forEach(card => {
-        const itemCard = document.createElement('div');
-        itemCard.classList.add('menu-item-card');
-    
-        const pricePlusContainer = document.createElement('div');
-        pricePlusContainer.classList.add('price-plus-container');
-    
+    function createCard(cardData) {
+        const card = document.createElement('div');
+        card.classList.add('menu-item-card');
+        card.style.setProperty('--gradient-color', getGradientColor(cardData.title));
+
+        const pricePlus = document.createElement('div');
+        pricePlus.classList.add('price-plus-container');
+
         const price = document.createElement('span');
         price.classList.add('price-donut');
-        price.textContent = card.price;
-    
+        price.textContent = cardData.price;
+
         const plusIcon = document.createElement('i');
-        plusIcon.classList.add('fa-solid', 'fa-square-plus');
-    
-        pricePlusContainer.appendChild(plusIcon);
-        pricePlusContainer.appendChild(price);
-    
+        plusIcon.classList.add('fa-solid', 'fa-square-plus', 'fa-lg');
+        plusIcon.title = "Add to dream cart!";
+
+        pricePlus.appendChild(plusIcon);
+        pricePlus.appendChild(price);
+
         const img = document.createElement('img');
-        img.src = vanillaDonut;
-        img.alt = card.imgAlt;
-        // img.id = 'donut-vanilla';
-    
+        img.src = cardData.imgSrc;
+        img.alt = cardData.imgAlt;
+        img.title = cardData.imgAlt;
+        img.id = "donut-image";
+
         const line1 = document.createElement('div');
         line1.classList.add('card-line-1');
-        const h1 = document.createElement('h1');
-        h1.textContent = card.title;
-        line1.appendChild(h1);
-    
+
+        const title = document.createElement('h1');
+        title.textContent = cardData.title;
+        line1.appendChild(title);
+
         const line2 = document.createElement('div');
         line2.classList.add('card-line-2');
-        const p = document.createElement('p');
-        p.classList.add('donut-desc');
-        p.textContent = card.desc;
-        line2.appendChild(p);
-    
-        itemCard.appendChild(pricePlusContainer);
-        itemCard.appendChild(img);
-        itemCard.appendChild(line1);
-        itemCard.appendChild(line2);
-    
-        wrapper.appendChild(itemCard);
-    });    
+        const desc = document.createElement('p');
+        desc.classList.add('donut-desc');
+        desc.textContent = cardData.desc;
+        line2.appendChild(desc);
+
+        card.appendChild(pricePlus);
+        card.appendChild(img);
+        card.appendChild(line1);
+        card.appendChild(line2);
+
+        return card;
+    }
+
+    let sets = [
+        [...donutOptions],
+        [...donutOptions],
+        [...donutOptions]
+    ];
+
+    sets.flat().forEach(c => wrapper.appendChild(createCard(c)));
 
     carouselContainer.appendChild(wrapper);
     menu.appendChild(btnLeft);
@@ -139,66 +221,120 @@ export function loadMenu() {
     menu.appendChild(btnRight);
     content.appendChild(menu);
 
-    // Carousel logic
-    const totalCards = fullSet.length;
-    const visibleCards = 4; 
-    const middleIndex = Math.floor(totalCards / 2) - Math.floor(visibleCards / 2);
-    let currentIndex = middleIndex;
+    let offsetPx = totalSetWidth - 24;
 
-    // Position the carousel so the middle card is in view
-    const cardWidth = 384; // width from CSS (24rem assuming 16px base)
-    let offset = (cardWidth + 43) * currentIndex; 
-    // 48px gap assumed from CSS (3rem), adjust if changed
+    function setTransition(active) {
+        wrapper.style.transition = active ? 'transform 0.4s ease' : 'none';
+    }
 
-    function updateCarousel() {
-        wrapper.style.transition = 'transform 0.5s ease';
-        wrapper.style.transform = `translateX(calc(50% - ${offset}px))`;
+    function updatePos() {
+        wrapper.style.transform = `translateX(calc(50% - ${offsetPx}px))`;
+    }
+
+    function addRightSet() {
+        const newSet = [...donutOptions];
+        sets.push(newSet);
+        const frag = document.createDocumentFragment();
+        newSet.forEach(c => frag.appendChild(createCard(c)));
+        wrapper.appendChild(frag);
+    }
+
+    function addLeftSet() {
+        const newSet = [...donutOptions];
+        sets.unshift(newSet);
+        const frag = document.createDocumentFragment();
+        newSet.forEach(c => frag.appendChild(createCard(c)));
+        wrapper.prepend(frag);
+    }
+
+    function removeLeftSet() {
+        for (let i = 0; i < cardCount; i++) {
+            wrapper.removeChild(wrapper.firstChild);
+        }
+        sets.shift();
+    }
+
+    function removeRightSet() {
+        for (let i = 0; i < cardCount; i++) {
+            wrapper.removeChild(wrapper.lastChild);
+        }
+        sets.pop();
+    }
+
+    function addRemoveDuplicateSet() {
+        setTransition(false);
+
+        if (offsetPx > totalSetWidth * 2.5) {
+            removeLeftSet();
+            addRightSet();
+            offsetPx -= totalSetWidth;
+        }
+
+        if (offsetPx < totalSetWidth * 0.5) {
+            removeRightSet();
+            addLeftSet();
+            offsetPx += totalSetWidth;
+        }
+
+        updatePos();
     }
 
     function moveLeft() {
-        currentIndex--;
-        if (currentIndex < visibleCards) {
-            currentIndex = totalCards - visibleCards - 1;
-            wrapper.style.transition = 'none';
-            offset = (cardWidth + 43) * currentIndex;
-            wrapper.style.transform = `translateX(calc(50% - ${offset}px))`;
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    currentIndex--;
-                    offset = (cardWidth + 43) * currentIndex;
-                    updateCarousel();
-                });
-            });
-        } else {
-            offset = (cardWidth + 43) * currentIndex;
-            updateCarousel();
-        }
+        setTransition(false);
+        addRemoveDuplicateSet();
+        requestAnimationFrame(() => {
+            setTransition(true);
+            offsetPx -= (cardW + cardGap);
+            updatePos();
+        });
     }
 
     function moveRight() {
-        currentIndex++;
-        if (currentIndex > totalCards - visibleCards - 1) {
-            currentIndex = visibleCards;
-            wrapper.style.transition = 'none';
-            offset = (cardWidth + 43) * currentIndex;
-            wrapper.style.transform = `translateX(calc(50% - ${offset}px))`;
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    currentIndex++;
-                    offset = (cardWidth + 43) * currentIndex;
-                    updateCarousel();
-                });
-            });
-        } else {
-            offset = (cardWidth + 43) * currentIndex;
-            updateCarousel();
-        }
+        setTransition(false);
+        addRemoveDuplicateSet();
+        requestAnimationFrame(() => {
+            setTransition(true);
+            offsetPx += (cardW + cardGap);
+            updatePos();
+        });
     }
 
     btnLeft.addEventListener('click', moveLeft);
     btnRight.addEventListener('click', moveRight);
 
-    // Initial positioning
-    offset = (cardWidth + 39.5) * currentIndex;
-    wrapper.style.transform = `translateX(calc(50% - ${offset}px))`;
+    setTransition(false);
+    updatePos();
+    requestAnimationFrame(() => setTransition(true));
+
+    document.querySelectorAll('.menu-item-card').forEach((card) => {
+        card.style.setProperty('--x', '10%');
+        card.style.setProperty('--y', '90%');
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--x', `${x}px`);
+            card.style.setProperty('--y', `${y}px`);
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--x', '10%');
+            card.style.setProperty('--y', '90%');
+        });
+    });
+
+    const stripContainer = document.createElement('div');
+    stripContainer.classList.add('menu-strip-container');
+
+    const staticStrip = document.createElement('div');
+    staticStrip.classList.add('menu-strip');
+
+    const stripContent = document.createElement('div');
+    stripContent.classList.add('menu-strip-content');
+    stripContent.innerHTML = `<span><strong class="best-seller">Best Sellers:</strong> Velvet Swirl, Dark Oreo, Citrus Glow, and Caramel Bliss – <u class="glowing">Buy 5, Get 1 Free!</u></span>`;
+
+    staticStrip.appendChild(stripContent);
+    stripContainer.appendChild(staticStrip);
+    content.appendChild(stripContainer);
 }
