@@ -1,22 +1,33 @@
 import { loadHomePage } from './homepage.js';
 import { loadMenu } from './menu.js';
+import { loadContactPage } from './contact.js';
 import './styles.css';
 
 // const content = document.getElementById('content');
-
-// // Initial load
 // loadHomePage();
 
-// // Select all nav buttons
-// const navButtons = document.querySelectorAll('.nav-btn');
+// // Define colors for each tab without overriding --accent-pink
+// const tabColors = {
+//     home: '#ffff90',
+//     menu: '#fc6b4a',
+//     about: '#f5da28',
+//     reviews: '#f0a500',
+//     contact: '#9b5de5'
+// };
 
-// // Utility function to handle active class
-// function setActiveTab(button) {
-//     navButtons.forEach((btn) => btn.classList.remove('active')); // Remove active class from all buttons
-//     button.classList.add('active'); // Add active class to the clicked button
+// const navButtons = document.querySelectorAll('.nav-btn');
+// const logoBtn = document.querySelector('.logo-btn');
+
+// function setActiveTab(button, color) {
+//     navButtons.forEach((btn) => btn.classList.remove('active'));
+//     if (logoBtn && logoBtn !== button) {
+//         logoBtn.classList.remove('active');
+//     }
+//     button.classList.add('active');
+//     // Set a separate variable for the active tab color
+//     document.documentElement.style.setProperty('--active-tab-color', color);
 // }
 
-// // Placeholder functions for tabs not yet implemented
 // function loadAbout() {
 //     content.textContent = "";
 //     const aboutSection = document.createElement('div');
@@ -31,40 +42,41 @@ import './styles.css';
 //     content.appendChild(reviewsSection);
 // }
 
-// function loadContact() {
-//     content.textContent = "";
-//     const contactSection = document.createElement('div');
-//     contactSection.textContent = "Contact Page Content";
-//     content.appendChild(contactSection);
+// if (logoBtn) {
+//     logoBtn.addEventListener('click', () => {
+//         content.textContent = "";
+//         loadHomePage();
+//         setActiveTab(logoBtn, tabColors.home);
+//     });
 // }
 
-// // Event listeners
-// document.querySelector('.logo-btn').addEventListener('click', () => {
-//     content.textContent = "";
-//     loadHomePage();
-//     setActiveTab(document.querySelector('.logo-btn'));
-// });
+// // Assuming order of navButtons is:
+// // 0: logo-btn (Home)
+// // 1: Menu
+// // 2: About
+// // 3: Reviews
+// // 4: Contact
 
 // navButtons[1].addEventListener('click', () => {
 //     content.textContent = "";
 //     loadMenu();
-//     setActiveTab(navButtons[1]);
+//     setActiveTab(navButtons[1], tabColors.menu);
 // });
 
 // navButtons[2].addEventListener('click', () => {
 //     content.textContent = "";
 //     loadAbout();
-//     setActiveTab(navButtons[2]);
+//     setActiveTab(navButtons[2], tabColors.about);
 // });
 
 // navButtons[3].addEventListener('click', () => {
 //     content.textContent = "";
 //     loadReviews();
-//     setActiveTab(navButtons[3]);
+//     setActiveTab(navButtons[3], tabColors.reviews);
 // });
 
 // navButtons[4].addEventListener('click', () => {
 //     content.textContent = "";
-//     loadContact();
-//     setActiveTab(navButtons[4]);
+//     loadContactPage();
+//     setActiveTab(navButtons[4], tabColors.contact);
 // });
