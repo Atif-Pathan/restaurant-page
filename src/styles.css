@@ -195,7 +195,7 @@ strong {
     display: flex;
     justify-content: center;
     /* height: 40rem; */
-    background-image: url(./donuts-flying-2.png);
+    background-image: url(./images/donuts-flying-2.png);
     background-size: 150%;
     background-position-y: center;
     background-position-x: -12rem;
@@ -303,20 +303,35 @@ strong {
 }
 
 .menu-item-card {
+    position: relative;
+    background: radial-gradient(
+        circle at var(--x, 15%) var(--y, 80%),
+        var(--gradient-color) 0%,
+        #fffae2 55%
+    );
     border: 2px solid var(--outline-border);
     min-width: 24rem;
     height: 32rem;
     display: flex;
     flex-direction: column;
-    /* gap: 1rem; */
-    /* align-items: center; */
+    gap: 1.5rem;
     justify-content: space-between;
     padding: 2rem 2.5rem;
+    overflow: hidden;
+    transition: background 0.1s ease;
 }
 
 .price-plus-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    /* margin-bottom: 1rem; */
+    font-size: 1.2rem;
+}
+
+.fa-square-plus {
+    color: #f53490;
 }
 
 .price-donut {
@@ -324,39 +339,42 @@ strong {
     font-family: "Exo", sans-serif;
     font-style: italic;
     color: #4d4c4c;
-    margin-bottom: 1.5rem;
 }
 
-#donut-vanilla {
-    width: 18rem;
-    margin-bottom: 2rem;
+#donut-image {
+    height: 14rem;
+    /* margin-bottom: 2rem; */
     align-self: center;
     /* background-color: black; */
 }
 
 .card-line-1, .card-line-2 {
     font-family: "Exo", sans-serif;
-    /* background-color: #ff9ce9; */
     display: flex;
     width: 100%;
-    align-items: center;
+    justify-content: center;
 }
 
 .card-line-1 {
     line-height: 1;
-    justify-content: center;
-    text-align: start;
+    text-align: center;
+    align-items: center;
 }
 
 .card-line-1 h1 {
     font-family: "Titan One", sans-serif;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    width: 100%;
 }
 
 .card-line-2 {
     flex: 1;
-    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.donut-desc {
+    text-align: center;
 }
 
 /* To achieve the hazy edges around arrows, we can use gradient overlays */
@@ -378,4 +396,53 @@ strong {
 .menu::after {
     right: 0;
     background: linear-gradient(to left, #fffae2, rgba(255,236,109,0));
+}
+
+.menu-strip-container {
+    height: 10vh;
+    border-bottom: 2px solid var(--outline-border); /* Changed to top border for separation */
+    border-right: 2px solid var(--outline-border);
+    border-left: 2px solid var(--outline-border);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffb4ee;
+}
+
+.menu-strip {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.menu-strip-content {
+    font-family: "EXO", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    display: flex;
+    animation: glow 1.5s ease-in-out infinite;
+}
+
+.best-seller {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.glowing {
+    color: #f11e84;
+    animation: glow 1.5s ease-in-out infinite;
+    font-weight: 700;
+}
+
+@keyframes glow {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+        /* opacity: 0.9; Full opacity */
+    }
+    50% {
+        transform: scale(1.02); /* Slightly larger */
+        /* opacity: 1; Slightly dimmer */
+    }
 }
