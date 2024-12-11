@@ -133,24 +133,36 @@ button {
 .nav-btn.active {
     font-weight: bold; /* Make the active tab stand out */
     font-size: 2rem;
-    transition: all 0.1s ease; /* Smooth transition */
+    transition: all 0.15s ease; /* Smooth transition */
 }
 
 .home-tab.active {
-    background-color: var(--bg-pink);
+    /* background-color: var(--bg-pink); */
 }
 
 .menu-tab.active {
-    background-color: #ffec6d;
+    background: radial-gradient(
+        circle at var(--x, 15%) var(--y, 80%),
+        #ffec6d 0%,
+        #fffae2 55%
+    );
+    /* background-color: #ffec6d; */
 }
 
 .reviews-tab.active {
-
+    background: radial-gradient(
+        ellipse 70% 90% at 65% 20%, 
+        #fa70b3e7 0%, 
+        #fffae2 75%);
 }
 
 .contact-tab.active {
     background-color: var(--accent-pink);
 }
+
+.about-tab.active {
+
+} 
 
 .home {
     display: flex;
@@ -790,3 +802,72 @@ strong {
     text-transform: capitalize;
 }
 
+.about-wrapper {
+    height: 87vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--outline-border);
+    border-left: 2px solid var(--outline-border);
+    border-right: 2px solid var(--outline-border);
+    padding: 9vh 10vh 9vh 9vh;
+    position: relative;
+    font-size: 2.5rem;
+    line-height: 1.45;
+    font-family: "Exo", sans-serif;
+    overflow: hidden;
+    font-style: italic;
+}
+
+.center-image-container {
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path:ellipse(22.5rem 22.3rem);
+    width: 45rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+}
+
+.center-image-container img {
+    width: 45rem;
+    object-fit: cover;
+}
+
+.left-text {
+    text-align: right;
+    width: 50%;
+    float: left;
+}
+
+.left-text strong, 
+.right-text strong {
+    text-decoration: none;
+    color: #f53490;
+}
+
+.left-text::before,
+.right-text::before {
+    content: "";
+    width: 25rem;
+    height: 75vh;
+}
+
+.left-text::before {
+    float: right;
+    shape-outside: ellipse(19.5rem 17.55rem at 100% 50%);
+}
+
+.right-text {
+    text-align: left;
+    width: 50%;
+    float: right;
+}
+
+.right-text::before {
+    float: left;
+    shape-outside: ellipse(19.5rem 17.65rem at 0% 50%);
+}
