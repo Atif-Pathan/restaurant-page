@@ -120,15 +120,15 @@ export function loadMenu() {
         },
         {
             imgSrc: oreo,
-            imgAlt: 'Dark Oreo Donut',
-            title: 'Dark Oreo',
+            imgAlt: 'Oreo Indulgence Donut',
+            title: 'Oreo Indulgence',
             price: '$4.00',
             desc: 'Vanilla glaze, chocolate drizzle, and Oreo crumbles.'
         },
         {
             imgSrc: cremeBrulee,
-            imgAlt: 'Caramel Bliss Donut',
-            title: 'Caramel Bliss',
+            imgAlt: 'Caramel Delight Donut',
+            title: 'Caramel Delight',
             price: '$4.25',
             desc: 'Caramelized sugar glaze on custard-filled donut, pure elegance.'
         }
@@ -152,8 +152,8 @@ export function loadMenu() {
         'Choco Melt': 'rgba(210, 165, 120, 0.6)',
         'Golden White': 'rgba(255, 223, 180, 0.6)',
         'Pink Dream': 'rgba(255, 200, 210, 0.6)',
-        'Dark Oreo': 'rgba(190, 190, 190, 0.6)',
-        'Caramel Bliss': 'rgba(235, 210, 170, 0.6)'
+        'Oreo Indulgence': 'rgba(190, 190, 190, 0.6)',
+        'Caramel Delight': 'rgba(235, 210, 170, 0.6)'
     };
 
     function getGradientColor(title) {
