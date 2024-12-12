@@ -818,7 +818,7 @@ strong {
     height: 87vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     border-bottom: 2px solid var(--outline-border);
     border-left: 2px solid var(--outline-border);
     border-right: 2px solid var(--outline-border);
