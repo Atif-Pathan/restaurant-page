@@ -865,7 +865,7 @@ strong {
 .right-text::before {
     content: "";
     width: 25rem;
-    height: 75vh;
+    height: 71vh;
 }
 
 .left-text::before {
