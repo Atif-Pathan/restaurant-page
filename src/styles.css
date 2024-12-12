@@ -132,36 +132,48 @@ button {
 
 .nav-btn.active {
     font-weight: bold; /* Make the active tab stand out */
-    font-size: 2rem;
+    font-size: 2.5rem;
     transition: all 0.15s ease; /* Smooth transition */
 }
 
 .home-tab.active {
     /* background-color: var(--bg-pink); */
+    background: radial-gradient(
+        ellipse 65% 135% at 50% -5%,
+        #fffae2 -10%,
+        var(--bg-pink) 80%
+    );
 }
 
 .menu-tab.active {
     background: radial-gradient(
-        circle at var(--x, 15%) var(--y, 80%),
-        #ffec6d 0%,
-        #fffae2 55%
+        ellipse 65% 110% at 50% -15%,
+        #f32e8df5 -20%, 
+        #fffae2 70%
     );
     /* background-color: #ffec6d; */
 }
 
 .reviews-tab.active {
     background: radial-gradient(
-        ellipse 70% 90% at 65% 20%, 
-        #fa70b3e7 0%, 
-        #fffae2 75%);
+        ellipse 65% 110% at 50% -15%, 
+        #f32e8df5 -20%, 
+        #fffae2 70%);
 }
 
 .contact-tab.active {
-    background-color: var(--accent-pink);
+    background: radial-gradient(
+        ellipse 65% 135% at 50% -5%, 
+        #fffae2 -10%, 
+        var(--accent-pink) 70%);
 }
 
 .about-tab.active {
-
+    background: radial-gradient(
+        ellipse 65% 110% at 50% -15%, 
+        /* #6df51ef5 -20%,  */
+        #f32e8df5 -20%, 
+        #fffae2 70%);
 } 
 
 .home {
