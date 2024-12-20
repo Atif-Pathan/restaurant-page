@@ -85,8 +85,8 @@ export function loadContactPage() {
 
     const hoursList = document.createElement('ul');
     hoursList.innerHTML = `
-        <li>Monday–Friday: <strong>8:00 AM to 8:00 PM</strong></li>
-        <li>Saturday–Sunday: <strong>9:00 AM to 10:00 PM</strong></li>
+        <li>Mon–Fri: <strong>8:00 AM to 8:00 PM</strong></li>
+        <li>Sat–Sun: <strong>9:00 AM to 10:00 PM</strong></li>
     `;
 
     operatingHours.appendChild(opHoursHeading);

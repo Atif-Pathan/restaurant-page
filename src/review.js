@@ -25,11 +25,11 @@ export function loadReview() {
     reviewsContainer.classList.add('reviews-container');
 
     const reviews = [
-        { name: 'Olivia Harper', review: 'The <strong>Coconut Bliss</strong> was absolutely divine! Perfectly sweet with a hint of tropical freshness that wakes you up.' },
-        { name: 'Max Dawson', review: 'A box of donuts from Dreamy Donuts is my weekend tradition. They never ever disappoint, and the variety is unmatched!' },
-        { name: 'Sophia Clarke', review: 'I’ve never tasted anything as satisfying as the <strong>Caramel Delight</strong>. It’s an absolute must-try for anyone with a sweet tooth.' },
-        { name: 'Lucas Bennett', review: 'Dreamy Donuts combines creativity and flavor perfectly. The presentation and taste are always top-notch.' }
-    ];
+        { name: 'Olivia Harper', review: 'The Coconut Bliss was sweet and fresh—perfect for any tropical cravings!' },
+        { name: 'Max Dawson', review: 'Dreamy Donuts are my weekend must-have. They always impress with taste and variety!' },
+        { name: 'Sophia Clarke', review: 'Caramel Delight is heavenly. A perfect treat for anyone who loves a sweet indulgence!' },
+        { name: 'Lucas Bennett', review: 'Every donut is a masterpiece—creative, flavorful, and always beautifully presented.' }
+    ];    
 
     reviews.forEach(({ name, review }) => {
         const reviewBox = document.createElement('div');
@@ -69,7 +69,7 @@ export function loadReview() {
             imgSrc: caramel,
             alt: 'Caramel Delight Donut',
             name: 'Caramel Delight',
-            tags: ['#CustardFilled', '#SmoothCaramel', '#RichTexture', '#Decadent']
+            tags: ['#CustardFilled', '#SilkySmooth', '#RichTexture', '#Decadent']
         },
         {
             imgSrc: vanilla,
