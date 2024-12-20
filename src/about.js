@@ -27,9 +27,9 @@ export function loadAbout() {
     const leftText = document.createElement('div');
     leftText.classList.add('left-text');
     leftText.innerHTML = `
-        Welcome to <strong>Dreamy Donuts</strong>, where every creation is a sweet escape. 
-        Each donut is crafted with care, blending delicate flavors and soft textures into moments worth savoring. 
-        With the finest ingredients and a touch of magic, we transform simple pleasures into cherished memories, one bite at a time.
+        Welcome to <strong>Dreamy Donuts</strong>, where each creation is a sweet escape. 
+        Every donut blends delicate flavors with soft textures to create moments worth savoring. 
+        Using the finest ingredients, we craft every bite to touch you with magic.
     `;
     aboutWrapper.appendChild(leftText);
 
@@ -38,9 +38,8 @@ export function loadAbout() {
     rightText.classList.add('right-text');
     rightText.innerHTML = `
         Step into a world where the comforting aroma of freshly baked donuts fills the air. 
-        At Dreamy Donuts, every flavor is a dream, celebrating creativity, passion, and joy. 
-        Share stories, enjoy a coffee, and indulge in treats that bring warmth and happiness to your day. 
-        This is your moment to unwind and <strong>DREAM</strong> with every bite.
+        Each flavor is crafted with creativity, passion, and joy to brighten your day. 
+        Savor every bite and let it inspire you to <strong>DREAM</strong> with every delicious moment.
     `;
     aboutWrapper.appendChild(rightText);
 
